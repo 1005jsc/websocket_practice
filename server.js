@@ -19,6 +19,6 @@ const socket = new WebSocket.Server({
 socket.on('connection', (ws, req) => {
   ws.on('message', (msg) => {
     console.log('유저가 보낸거: ' + msg);
-    ws.send('나는 서버');
+    ws.send('나는 서버: ' + msg);
   });
 });
